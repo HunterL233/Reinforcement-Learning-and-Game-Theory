@@ -14,23 +14,26 @@ And here are some pre-trained weights that you can play with:
 在vendor/atari_wrappers.py中:
 
 需要将第54行的
-'''
+```
 noops = self.unwrapped.np_random.randint(1, self.noop_max + 1)  # pylint: disable=E1101
-'''
+```
 修改为
-
-'''noops = self.unwrapped.np_random.integers(1, self.noop_max + 1)  # pylint: disable=E1101'''
-
+```
+noops = self.unwrapped.np_random.integers(1, self.noop_max + 1)  # pylint: disable=E1101
+```
 将第58行的
-'''obs, _, done, _ = self.env.step(self.noop_action)'''
-
+```
+obs, _, done, _ = self.env.step(self.noop_action)
+```
 修改为
-
-'''obs, _, done, _ ,_= self.env.step(self.noop_action)'''
-
+```
+obs, _, done, _ ,_= self.env.step(self.noop_action)
+```
 将第141行的
-'''obs, reward, done, info = self.env.step(action)'''
-
+```
+obs, reward, done, info = self.env.step(action)
+```
 修改为
-
-'''obs, reward, done, info,_ = self.env.step(action)'''
+```
+obs, reward, done, info,_ = self.env.step(action)
+```
