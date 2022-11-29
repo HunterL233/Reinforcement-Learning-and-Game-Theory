@@ -12,7 +12,8 @@ And here are some pre-trained weights that you can play with:
 将该模型放到自己的PC上执行时会遇到几个需要修改的地方:
 在vendor/atari_wrappers.py中:
 需要将第54行的
-"""noops = self.unwrapped.np_random.randint(1, self.noop_max + 1)  # pylint: disable=E1101"""
+
+'noops = self.unwrapped.np_random.randint(1, self.noop_max + 1)  # pylint: disable=E1101'
 
 修改为
 
